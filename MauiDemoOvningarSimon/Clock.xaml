@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiDemoOvningarSimon.Clock"
+             Title="Clock"
+             BackgroundColor="#9DB2BF">
+    <VerticalStackLayout>
+        <Button
+                x:Name="MainMenu"
+                Margin="20, 20, 0, 0"
+                Text="&#x2190;"
+                BackgroundColor="#9DB2BF"
+                WidthRequest="25"
+                FontSize="Large"
+                HeightRequest="20"
+                HorizontalOptions="Start"
+                VerticalOptions="Center"
+                Clicked="OnMainMenuClicked"
+                TextColor="Black"/>
+        
+        <Label 
+            Text="Klocka"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Style="{StaticResource Headline}"
+            TextColor="#526D82"
+            Margin="0, 200, 0, 0"/>
+
+        <Label
+            x:Name="CurrentDate"
+            Text=""
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Padding="0, 40, 0 ,0"
+            TextColor="#526D82"
+            Style="{StaticResource SubHeadline}"/>
+
+
+        <Label
+            x:Name="MyTimer"
+            Margin="0, 80, 0, 0"
+            Text="Tryck för att starta timern"
+            TextColor="#526D82"
+            Style="{StaticResource Headline}"
+            HorizontalOptions="Center"/>
+
+
+        <Button
+            Margin="0, 40, 0, 0"
+            HeightRequest="60"
+            WidthRequest="200"
+            BackgroundColor="#27374D"
+            TextColor="#DDE6ED"
+            Text="Start"
+            Clicked="OnBtnClicked"/>
+    </VerticalStackLayout>
+</ContentPage>

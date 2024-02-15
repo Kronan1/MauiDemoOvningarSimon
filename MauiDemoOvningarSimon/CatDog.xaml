@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiDemoOvningarSimon.CatDog"
+             Title="CatDog"
+             BackgroundColor="BlanchedAlmond">
+    <VerticalStackLayout>
+        <Image
+            x:Name="MyImage"
+            Source="dog.png"
+            HeightRequest="400"
+            WidthRequest="400"
+            HorizontalOptions="Center"
+            Margin="0, 100, 0, 0"/>
+
+        <Grid
+            RowDefinitions="100"
+            ColumnDefinitions="*, 50, *"
+            Padding="10"
+            ColumnSpacing="10">
+
+            <Button
+            x:Name="Cat"
+            Grid.Row="0"
+            Grid.Column="0"
+            Text="Katt"
+            BackgroundColor="DarkOliveGreen"
+            MaximumWidthRequest="240"
+            WidthRequest="200"
+            HorizontalOptions="EndAndExpand"
+            Clicked="OnBtnClicked"/>
+
+            <Button
+            x:Name="Dog"
+            Grid.Row="0"
+            Grid.Column="2"
+            Text="Dog"
+            BackgroundColor="DarkOliveGreen"
+            MaximumWidthRequest="240"
+            WidthRequest="200"
+            HorizontalOptions="StartAndExpand"
+            Clicked="OnBtnClicked"/>
+        </Grid>
+
+
+        <Label
+            x:Name="ClickedText"
+            Padding="0, 20, 0 ,0"
+            Text="Du har tryck på katt 0 gånger, och på hund 0 gånger"
+            Style="{StaticResource SubHeadline}"/>
+
+        <Button
+            x:Name="MainMenu"
+            Margin="0, 60, 0, 0"
+            Text="Tillbaka"
+            BackgroundColor="DarkOliveGreen"
+            WidthRequest="150"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Clicked="OnMainMenuClicked"/>
+    </VerticalStackLayout>
+</ContentPage>

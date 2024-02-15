@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiDemoOvningarSimon.MainPage"
+             BackgroundImageSource="background.jpg"
+             >
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Grid
+                RowDefinitions="300, 90, 90, 90, *"
+                >
+
+                <Label
+                    Text="Simons Övningar!"
+                    Style="{StaticResource Headline}"
+                    SemanticProperties.HeadingLevel="Level1" 
+                    Grid.Row="0"
+                    Margin="0, 100, 0, 0"
+                    TextColor="Bisque"/>
+
+
+                <Button
+                    x:Name="Btn1"
+                    BackgroundColor="#2b4d59"
+                    Text="Katt och hund" 
+                    SemanticProperties.Hint="Exercise 1 button"
+                    Clicked="OnBtnClicked"
+                    HorizontalOptions="Fill" 
+                    Grid.Row="1"
+                    WidthRequest="300"
+                    HeightRequest="60"
+                    Opacity="0.60"/>
+
+                <Button
+                    x:Name="Btn2"
+                    BackgroundColor="#2b4d59"
+                    Text="Miniräknare" 
+                    SemanticProperties.Hint="Exercise 2 button"
+                    Clicked="OnBtnClicked"
+                    HorizontalOptions="Fill" 
+                    Grid.Row="2"
+                    Margin="0, 20, 0, 0"
+                    WidthRequest="300"
+                    HeightRequest="60"
+                    Opacity="0.60"/>
+
+                <Button
+                    x:Name="Btn3"
+                    BackgroundColor="#2b4d59"
+                    Text="Timer" 
+                    SemanticProperties.Hint="Exercise 3 button"
+                    Clicked="OnBtnClicked"
+                    HorizontalOptions="Fill"
+                    Grid.Row="3"
+                    Margin="0, 30, 0, 0"
+                    WidthRequest="300"
+                    HeightRequest="60"
+                    Opacity="0.60"/>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
